@@ -9,7 +9,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _hooks = _interopRequireDefault(require("../hooks"));
+var _useDash2 = _interopRequireDefault(require("../hooks/useDash"));
 
 var _SearchInput = _interopRequireDefault(require("./SearchInput"));
 
@@ -61,7 +61,7 @@ var DataQuery = function DataQuery(_ref) {
     per_page: perPage
   };
 
-  var _useDash = (0, _hooks["default"])({
+  var _useDash = (0, _useDash2["default"])({
     collection: collection
   }),
       query = _useDash.query,

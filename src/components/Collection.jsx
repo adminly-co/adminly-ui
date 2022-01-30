@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import useDash from '../hooks'
+import useDash from '../hooks/useDash'
 import SearchInput from './SearchInput'
 import { 
   Grid,
