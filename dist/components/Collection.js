@@ -9,6 +9,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _useDash2 = _interopRequireDefault(require("../hooks/useDash"));
 
 var _SearchInput = _interopRequireDefault(require("./SearchInput"));
@@ -138,14 +140,14 @@ var DataQuery = function DataQuery(_ref) {
 };
 
 DataQuery.propTypes = {
-  collection: PropTypes.string.isRequired,
-  filters: PropTypes.object,
-  perPage: PropTypes.number,
-  renderItem: PropTypes.func.isRequired,
-  searchable: PropTypes.bool,
-  sortBy: PropTypes.string,
-  sortDirection: PropTypes.string,
-  variant: PropTypes.oneOf(['list', 'grid'])
+  collection: _propTypes["default"].string.isRequired,
+  filters: _propTypes["default"].object,
+  perPage: _propTypes["default"].number,
+  renderItem: _propTypes["default"].func.isRequired,
+  searchable: _propTypes["default"].bool,
+  sortBy: _propTypes["default"].string,
+  sortDirection: _propTypes["default"].string,
+  variant: _propTypes["default"].oneOf(['list', 'grid'])
 };
 var _default = DataQuery;
 exports["default"] = _default;

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import useDash from '../hooks/useDash'
 import SearchInput from './SearchInput'
 import { 
