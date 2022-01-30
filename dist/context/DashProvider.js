@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _DashContext = _interopRequireDefault(require("context/DashContext"));
+var _DashContext = _interopRequireDefault(require("./DashContext"));
 
 var _axios = _interopRequireDefault(require("axios"));
 

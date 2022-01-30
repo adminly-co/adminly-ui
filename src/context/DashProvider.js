@@ -1,5 +1,5 @@
 import React from 'react'
-import DashContext from 'context/DashContext'
+import DashContext from './DashContext'
 import axios from 'axios'
 
 const DashProvider = ({ token, url, children }) => {
