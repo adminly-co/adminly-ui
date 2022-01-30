@@ -21,7 +21,7 @@ var _Placeholder = _interopRequireDefault(require("./Placeholder"));
 
 var _iconsMaterial = require("@mui/icons-material");
 
-var _excluded = ["collection", "filters", "perPage", "renderItem", "searchable", "sortBy", "sortDirection", "variant"];
+var _excluded = ["collection", "filters", "perPage", "renderItem", "searchable", "sortBy", "sortDirection", "variant", "disableLoadMore"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -53,6 +53,8 @@ var DataQuery = function DataQuery(_ref) {
       sortDirection = _ref$sortDirection === void 0 ? 'asc' : _ref$sortDirection,
       _ref$variant = _ref.variant,
       variant = _ref$variant === void 0 ? 'list' : _ref$variant,
+      _ref$disableLoadMore = _ref.disableLoadMore,
+      disableLoadMore = _ref$disableLoadMore === void 0 ? false : _ref$disableLoadMore,
       props = _objectWithoutProperties(_ref, _excluded);
 
   var defaultQuery = {
@@ -123,7 +125,7 @@ var DataQuery = function DataQuery(_ref) {
     spacing: 1
   }, resources.map(function (item, index) {
     return renderItem(item, index);
-  })), page < numPages && /*#__PURE__*/_react["default"].createElement(_material.Box, {
+  })), page < numPages && !disableLoadMore && /*#__PURE__*/_react["default"].createElement(_material.Box, {
     sx: sx.loadMore
   }, /*#__PURE__*/_react["default"].createElement(_material.Button, {
     sx: sx.loadMoreButton,

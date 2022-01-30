@@ -21,6 +21,7 @@ const DataQuery = ({
   sortBy='id',
   sortDirection='asc',
   variant='list',
+  disableLoadMore=false,
 	...props
 }) => {
 
@@ -110,7 +111,7 @@ const DataQuery = ({
               </Grid>
             )}                          
           
-            { page < numPages && (
+            { page < numPages && !disableLoadMore && (
             <Box sx={ sx.loadMore }>
               <Button 
                 sx={ sx.loadMoreButton }
