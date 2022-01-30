@@ -13,7 +13,7 @@ var _utils = require("../utils");
 
 var _DashContext = _interopRequireDefault(require("../context/DashContext"));
 
-var _excluded = ["tableName", "defaultQuery"];
+var _excluded = ["collection", "defaultQuery"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -56,7 +56,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var useDash = function useDash(_ref) {
-  var name = _ref.tableName,
+  var collection = _ref.collection,
       _ref$defaultQuery = _ref.defaultQuery,
       defaultQuery = _ref$defaultQuery === void 0 ? _utils.emptyQuery : _ref$defaultQuery,
       props = _objectWithoutProperties(_ref, _excluded);
@@ -64,7 +64,7 @@ var useDash = function useDash(_ref) {
   var _ref2 = (0, _react.useContext)(_DashContext["default"]) || {},
       api = _ref2.api;
 
-  var url = "/".concat(name);
+  var url = "/".concat(collection);
 
   var _useState = (0, _react.useState)({}),
       _useState2 = _slicedToArray(_useState, 2),
@@ -292,7 +292,7 @@ var useDash = function useDash(_ref) {
             case 0:
               showLoading();
               _context3.next = 3;
-              return api.post(url, _defineProperty({}, name, resource));
+              return api.post(url, _defineProperty({}, collection, resource));
 
             case 3:
               res = _context3.sent;
@@ -329,7 +329,7 @@ var useDash = function useDash(_ref) {
               setId(resource.id);
               showLoading();
               _context4.next = 4;
-              return api.put("".concat(url, "/").concat(resource.id), _defineProperty({}, name, resource));
+              return api.put("".concat(url, "/").concat(resource.id), _defineProperty({}, collection, resource));
 
             case 4:
               res = _context4.sent;
@@ -391,7 +391,7 @@ var useDash = function useDash(_ref) {
               _context6.next = 3;
               return api.post("".concat(url, "/update_many"), _defineProperty({
                 ids: ids
-              }, name, resource));
+              }, collection, resource));
 
             case 3:
               res = _context6.sent;
@@ -449,9 +449,9 @@ var useDash = function useDash(_ref) {
   };
 
   var handleChange = function handleChange(ev) {
-    var name = ev.target.name;
+    var collection = ev.target.collection;
     var value = ev.target.type === 'checkbox' ? ev.target.checked : ev.target.value;
-    setResource(_objectSpread(_objectSpread({}, resource), {}, _defineProperty({}, name, value)));
+    setResource(_objectSpread(_objectSpread({}, resource), {}, _defineProperty({}, collection, value)));
   };
 
   var reloadOne = function reloadOne() {

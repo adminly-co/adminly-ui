@@ -3,14 +3,14 @@ import { buildQuery, emptyQuery } from '../utils'
 import DashContext from '../context/DashContext'
 
 const useDash = ({
-	tableName: name,
+	collection,
 	defaultQuery = emptyQuery,
 	...props
 }) => {
 
 	const { api } = useContext(DashContext) || {}
 
-	let url = `/${name}`
+	let url = `/${collection}`
 
 	const [query, setQuery] = useState({})
 	const [activeFilters, setActiveFilters] = useState([
@@ -99,7 +99,7 @@ const useDash = ({
 	const create = async (resource) => {
 		showLoading()
 		const res = await api.post(url, {
-			[name]: resource,
+			[collection]: resource,
 		})
 		if (res.data && res.data.id) {
 			setResource(res.data)
@@ -114,7 +114,7 @@ const useDash = ({
 		setId(resource.id)
 		showLoading()
 		const res = await api.put(`${url}/${resource.id}`, {
-			[name]: resource,
+			[collection]: resource,
 		})
 		hideLoading()
 		return res.data
@@ -131,7 +131,7 @@ const useDash = ({
 		showLoading()
 		const res = await api.post(`${url}/update_many`, {
 			ids: ids,
-			[name]: resource,
+			[collection]: resource,
 		})
 		hideLoading()
 		return res.data
@@ -151,14 +151,14 @@ const useDash = ({
 	}
 
 	const handleChange = (ev) => {
-		const { name } = ev.target
+		const { collection } = ev.target
 		const value =
 			ev.target.type === 'checkbox'
 				? ev.target.checked
 				: ev.target.value
 		setResource({
 			...resource,
-			[name]: value,
+			[collection]: value,
 		})
 	}
 
