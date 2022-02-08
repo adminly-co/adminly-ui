@@ -51,10 +51,10 @@ Object.defineProperty(exports, "Skeleton", {
     return _Skeleton["default"];
   }
 });
-Object.defineProperty(exports, "useDash", {
+Object.defineProperty(exports, "useAdminly", {
   enumerable: true,
   get: function get() {
-    return _useDash["default"];
+    return _useAdminly["default"];
   }
 });
 Object.defineProperty(exports, "useMenu", {
@@ -76,7 +76,7 @@ var _SearchInput = _interopRequireDefault(require("./components/SearchInput"));
 
 var _Skeleton = _interopRequireDefault(require("./components/Skeleton"));
 
-var _useDash = _interopRequireDefault(require("./hooks/useDash"));
+var _useAdminly = _interopRequireDefault(require("./hooks/useAdminly"));
 
 var _useMenu = _interopRequireDefault(require("./hooks/useMenu"));
 

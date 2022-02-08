@@ -16,7 +16,7 @@ import {
 import { MoreHoriz } from '@mui/icons-material'
 import useMenu  from '../hooks/useMenu'
 
-const DashGridItem = ({ 
+const GridItem = ({ 
     primary,
     secondary,
     image,
@@ -105,7 +105,7 @@ const DashGridItem = ({
 }
 
 
-export default DashGridItem
+export default GridItem
 
 const sx = {
   actions: {

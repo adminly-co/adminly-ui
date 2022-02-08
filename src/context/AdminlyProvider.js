@@ -1,8 +1,8 @@
 import React from 'react'
-import DashContext from './DashContext'
+import AdminlyContext from './AdminlyContext'
 import axios from 'axios'
 
-const DashProvider = ({ token, url, children }) => {
+const AdminlyProvider = ({ token, url, children }) => {
   
   const api = axios.create({
     baseURL: url,
@@ -23,10 +23,10 @@ const DashProvider = ({ token, url, children }) => {
 	}
 
 	return (
-		<DashContext.Provider value={value}>
+		<AdminlyContext.Provider value={value}>
 			{children}
-		</DashContext.Provider>
+		</AdminlyContext.Provider>
 	)
 }
 
-export default DashProvider
+export default AdminlyProvider

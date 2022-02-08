@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import useDash from '../hooks/useDash'
+import useAdminly from '../hooks/useAdminly'
 import SearchInput from './SearchInput'
 import { 
   Grid,
@@ -36,30 +36,14 @@ const DataQuery = ({
 	const {
 		query,
     setQuery,
-		activeFilters,
-		setActiveFilters,
 		isLoading,
     isLoaded,
-		resource,
 		resources,
 		findMany,
-		update: updateResource,
-		destroy: deleteResource,
-		create: createResource,
     loadMore,
-		updateMany,
-		deleteMany,
-		reloadMany,
-		setResource,
-		setResources,
-		sortAll,
-		paginate,
     page,
 		numPages,
-		totalCount,
-		startIndex,
-		endIndex,
-	} = useDash({
+	} = useAdminly({
 		collection: collection
 	})
 

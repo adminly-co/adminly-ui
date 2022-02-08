@@ -11,7 +11,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _useDash2 = _interopRequireDefault(require("../hooks/useDash"));
+var _useAdminly2 = _interopRequireDefault(require("../hooks/useAdminly"));
 
 var _SearchInput = _interopRequireDefault(require("./SearchInput"));
 
@@ -65,34 +65,34 @@ var DataQuery = function DataQuery(_ref) {
     per_page: perPage
   };
 
-  var _useDash = (0, _useDash2["default"])({
+  var _useAdminly = (0, _useAdminly2["default"])({
     collection: collection
   }),
-      query = _useDash.query,
-      setQuery = _useDash.setQuery,
-      activeFilters = _useDash.activeFilters,
-      setActiveFilters = _useDash.setActiveFilters,
-      isLoading = _useDash.isLoading,
-      isLoaded = _useDash.isLoaded,
-      resource = _useDash.resource,
-      resources = _useDash.resources,
-      findMany = _useDash.findMany,
-      updateResource = _useDash.update,
-      deleteResource = _useDash.destroy,
-      createResource = _useDash.create,
-      loadMore = _useDash.loadMore,
-      updateMany = _useDash.updateMany,
-      deleteMany = _useDash.deleteMany,
-      reloadMany = _useDash.reloadMany,
-      setResource = _useDash.setResource,
-      setResources = _useDash.setResources,
-      sortAll = _useDash.sortAll,
-      paginate = _useDash.paginate,
-      page = _useDash.page,
-      numPages = _useDash.numPages,
-      totalCount = _useDash.totalCount,
-      startIndex = _useDash.startIndex,
-      endIndex = _useDash.endIndex;
+      query = _useAdminly.query,
+      setQuery = _useAdminly.setQuery,
+      activeFilters = _useAdminly.activeFilters,
+      setActiveFilters = _useAdminly.setActiveFilters,
+      isLoading = _useAdminly.isLoading,
+      isLoaded = _useAdminly.isLoaded,
+      resource = _useAdminly.resource,
+      resources = _useAdminly.resources,
+      findMany = _useAdminly.findMany,
+      updateResource = _useAdminly.update,
+      deleteResource = _useAdminly.destroy,
+      createResource = _useAdminly.create,
+      loadMore = _useAdminly.loadMore,
+      updateMany = _useAdminly.updateMany,
+      deleteMany = _useAdminly.deleteMany,
+      reloadMany = _useAdminly.reloadMany,
+      setResource = _useAdminly.setResource,
+      setResources = _useAdminly.setResources,
+      sortAll = _useAdminly.sortAll,
+      paginate = _useAdminly.paginate,
+      page = _useAdminly.page,
+      numPages = _useAdminly.numPages,
+      totalCount = _useAdminly.totalCount,
+      startIndex = _useAdminly.startIndex,
+      endIndex = _useAdminly.endIndex;
 
   var handleChange = function handleChange(e) {
     setQuery(_objectSpread(_objectSpread({}, query), {}, {

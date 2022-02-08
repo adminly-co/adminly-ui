@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { buildQuery, emptyQuery } from '../utils'
-import DashContext from '../context/DashContext'
+import DashContext from '../context/AdminlyContext'
 
-const useDash = ({
+const useAdminly = ({
 	collection,
 	defaultQuery = emptyQuery,
 	...props
@@ -229,4 +229,4 @@ const useDash = ({
 	}
 }
 
-export default useDash
+export default useAdminly

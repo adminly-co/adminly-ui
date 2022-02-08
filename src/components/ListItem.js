@@ -9,10 +9,10 @@ import {
   Menu,
   MenuItem
 } from '@mui/material'
-import { Edit, Delete, MoreHoriz } from '@mui/icons-material'
+import { MoreHoriz } from '@mui/icons-material'
 import useMenu from '../hooks/useMenu'
 
-const DashListItem = ({ 
+const ListItem = ({ 
     primary,
     secondary,
     image,
@@ -72,4 +72,4 @@ const DashListItem = ({
 }
 
 
-export default DashListItem
+export default ListItem
