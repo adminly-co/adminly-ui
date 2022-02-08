@@ -21,7 +21,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var DashListItem = function DashListItem(_ref) {
+var MuiListItem = function MuiListItem(_ref) {
   var primary = _ref.primary,
       secondary = _ref.secondary,
       image = _ref.image,
@@ -58,5 +58,5 @@ var DashListItem = function DashListItem(_ref) {
   }, /*#__PURE__*/_react["default"].createElement(_material.ListItemText, null, "Delete")))));
 };
 
-var _default = DashListItem;
+var _default = MuiListItem;
 exports["default"] = _default;

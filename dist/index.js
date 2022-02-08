@@ -3,22 +3,28 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "AdminlyContext", {
+  enumerable: true,
+  get: function get() {
+    return _AdminlyContext["default"];
+  }
+});
+Object.defineProperty(exports, "AdminlyProvider", {
+  enumerable: true,
+  get: function get() {
+    return _AdminlyProvider["default"];
+  }
+});
+Object.defineProperty(exports, "Carousel", {
+  enumerable: true,
+  get: function get() {
+    return _Carousel["default"];
+  }
+});
 Object.defineProperty(exports, "Collection", {
   enumerable: true,
   get: function get() {
     return _Collection["default"];
-  }
-});
-Object.defineProperty(exports, "DashContext", {
-  enumerable: true,
-  get: function get() {
-    return _DashContext["default"];
-  }
-});
-Object.defineProperty(exports, "DashProvider", {
-  enumerable: true,
-  get: function get() {
-    return _DashProvider["default"];
   }
 });
 Object.defineProperty(exports, "GridItem", {
@@ -63,10 +69,18 @@ Object.defineProperty(exports, "useMenu", {
     return _useMenu["default"];
   }
 });
+Object.defineProperty(exports, "useResponsive", {
+  enumerable: true,
+  get: function get() {
+    return _useResponsive["default"];
+  }
+});
 
-var _GridItem = _interopRequireDefault(require("./components/GridItem"));
+var _Carousel = _interopRequireDefault(require("./components/Carousel"));
 
 var _Collection = _interopRequireDefault(require("./components/Collection"));
+
+var _GridItem = _interopRequireDefault(require("./components/GridItem"));
 
 var _ListItem = _interopRequireDefault(require("./components/ListItem"));
 
@@ -80,8 +94,10 @@ var _useAdminly = _interopRequireDefault(require("./hooks/useAdminly"));
 
 var _useMenu = _interopRequireDefault(require("./hooks/useMenu"));
 
-var _DashContext = _interopRequireDefault(require("./context/DashContext"));
+var _useResponsive = _interopRequireDefault(require("./hooks/useResponsive"));
 
-var _DashProvider = _interopRequireDefault(require("./context/DashProvider"));
+var _AdminlyContext = _interopRequireDefault(require("./context/AdminlyContext"));
+
+var _AdminlyProvider = _interopRequireDefault(require("./context/AdminlyProvider"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

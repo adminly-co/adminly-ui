@@ -33,7 +33,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var DashGridItem = function DashGridItem(_ref) {
+var GridItem = function GridItem(_ref) {
   var primary = _ref.primary,
       secondary = _ref.secondary,
       image = _ref.image,
@@ -101,7 +101,7 @@ var DashGridItem = function DashGridItem(_ref) {
   }, /*#__PURE__*/_react["default"].createElement(_material.ListItemText, null, "Delete")))))))));
 };
 
-var _default = DashGridItem;
+var _default = GridItem;
 exports["default"] = _default;
 var sx = {
   actions: {

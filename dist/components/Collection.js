@@ -70,29 +70,13 @@ var DataQuery = function DataQuery(_ref) {
   }),
       query = _useAdminly.query,
       setQuery = _useAdminly.setQuery,
-      activeFilters = _useAdminly.activeFilters,
-      setActiveFilters = _useAdminly.setActiveFilters,
       isLoading = _useAdminly.isLoading,
       isLoaded = _useAdminly.isLoaded,
-      resource = _useAdminly.resource,
       resources = _useAdminly.resources,
       findMany = _useAdminly.findMany,
-      updateResource = _useAdminly.update,
-      deleteResource = _useAdminly.destroy,
-      createResource = _useAdminly.create,
       loadMore = _useAdminly.loadMore,
-      updateMany = _useAdminly.updateMany,
-      deleteMany = _useAdminly.deleteMany,
-      reloadMany = _useAdminly.reloadMany,
-      setResource = _useAdminly.setResource,
-      setResources = _useAdminly.setResources,
-      sortAll = _useAdminly.sortAll,
-      paginate = _useAdminly.paginate,
       page = _useAdminly.page,
-      numPages = _useAdminly.numPages,
-      totalCount = _useAdminly.totalCount,
-      startIndex = _useAdminly.startIndex,
-      endIndex = _useAdminly.endIndex;
+      numPages = _useAdminly.numPages;
 
   var handleChange = function handleChange(e) {
     setQuery(_objectSpread(_objectSpread({}, query), {}, {

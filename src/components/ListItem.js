@@ -12,7 +12,7 @@ import {
 import { MoreHoriz } from '@mui/icons-material'
 import useMenu from '../hooks/useMenu'
 
-const ListItem = ({ 
+const MuiListItem = ({ 
     primary,
     secondary,
     image,
@@ -72,4 +72,4 @@ const ListItem = ({
 }
 
 
-export default ListItem
+export default MuiListItem
